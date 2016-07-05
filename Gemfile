@@ -8,6 +8,6 @@ gem 'sinatra-activerecord'
 group :development, :test do
   gem 'shotgun'
   gem 'minitest'
-  gem 'tux'
+  gem 'tux' # Loads the sinatra app in an interactive shell - kind of like Pry
   gem 'capybara'
 end
