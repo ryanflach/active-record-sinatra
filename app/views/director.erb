@@ -1,0 +1,12 @@
+<h1>Profile for <%= @director.name %></h1>
+
+<div id="director_films">
+  <% @director.films.each do |film| %>
+    <h3><%= film.title %> (<%= film.year %>)</h3>
+    <p>Gross US Box Office Sales: $<%= film.box_office_sales %></p>
+  <% end %>
+</div>
+
+<div id="director_gross">
+  <h3>Total Gross US Box Office Sales: $<%= @director.films.sum(:box_office_sales) %></h3>
+</div>

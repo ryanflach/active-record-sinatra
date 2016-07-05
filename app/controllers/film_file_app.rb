@@ -13,4 +13,9 @@ class FilmFile < Sinatra::Base
     @films = Film.all
     erb :genres_index
   end
+
+  get '/directors/:id' do |id|
+    @director = Director.find(id.to_i)
+    erb :director
+  end
 end
