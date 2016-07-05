@@ -1,3 +1,3 @@
 class Director < ActiveRecord::Base
-  has_many :film
+  has_many :films
 end
