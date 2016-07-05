@@ -8,5 +8,6 @@
 </div>
 
 <div id="director_gross">
-  <h3>Total Gross US Box Office Sales: $<%= @director.films.sum(:box_office_sales) %></h3>
+  <h3>Total Gross US Box Office Sales: $<%= @director.films.total_sales %></h3>
+  <h3>Average Gross US Box Office Sales: $<%= @director.films.average_gross %></h3>
 </div>
