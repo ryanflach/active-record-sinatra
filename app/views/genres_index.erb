@@ -1,0 +1,12 @@
+<h1>All Genres</h1>
+
+<div id="genres">
+  <% @genres.each do |genre| %>
+    <h3><%= genre.name %> (<%= @films.where(genre_id=genre.id).count %> films)</h3>
+    <ul>
+    <% genre.films.each do |film| %>
+      <li><h4> <%= film.title %> </h4></li>
+    <% end %>
+    </ul>
+  <% end %>
+</div>
